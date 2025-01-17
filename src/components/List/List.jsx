@@ -21,14 +21,14 @@ const List = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isEditing) {
-      // Update existing user
+      
       const updatedUsers = [...users];
       updatedUsers[editIndex] = formData;
       setUsers(updatedUsers);
       setIsEditing(false);
       setEditIndex(null);
     } else {
-      // Add new user
+
       setUsers((prev) => [...prev, formData]);
     }
     setFormData({
